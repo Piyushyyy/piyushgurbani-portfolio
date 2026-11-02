@@ -102,6 +102,8 @@ const Contact = () => {
             href="https://wa.me/918949768356?text=Hi%2C%20I%E2%80%99m%20interested%20in%20your%20marketing%2C%20website%20development%2C%20and%20branding%20services.%20Can%20you%20share%20more%20details%20on%20how%20you%20can%20help%20my%20business%20grow%3F"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Chat with Piyush Gurbani on WhatsApp"
+            title="Chat with Piyush on WhatsApp"
             className="w-14 h-14 rounded-full border-2 border-white/20 flex items-center justify-center text-white bg-transparent hover:bg-white hover:text-black hover:shadow-[0_0_40px_rgba(255,255,255,0.4)] transition-all duration-500"
           >
             <MessageCircle className="w-5 h-5" />
@@ -112,6 +114,8 @@ const Contact = () => {
             href="https://www.instagram.com/_piyushyyyy/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Follow Piyush Gurbani on Instagram"
+            title="Follow Piyush on Instagram"
             className="w-14 h-14 rounded-full border-2 border-white/20 flex items-center justify-center text-white bg-transparent hover:bg-white hover:text-black hover:shadow-[0_0_40px_rgba(255,255,255,0.4)] transition-all duration-500"
           >
             <Instagram className="w-5 h-5" />
@@ -119,9 +123,11 @@ const Contact = () => {
 
           {/* LinkedIn */}
           <a
-            href="https://www.linkedin.com/in/piyush-gurbani-40966041b/"
+            href="https://www.linkedin.com/in/piyush-gurbani-521a79441/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Connect with Piyush Gurbani on LinkedIn"
+            title="Connect with Piyush on LinkedIn"
             className="w-14 h-14 rounded-full border-2 border-white/20 flex items-center justify-center text-white bg-transparent hover:bg-white hover:text-black hover:shadow-[0_0_40px_rgba(255,255,255,0.4)] transition-all duration-500"
           >
             <Linkedin className="w-5 h-5" />
@@ -132,6 +138,8 @@ const Contact = () => {
             href="https://github.com/Piyushyyy"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="View Piyush Gurbani on GitHub"
+            title="View Piyush on GitHub"
             className="w-14 h-14 rounded-full border-2 border-white/20 flex items-center justify-center text-white bg-transparent hover:bg-white hover:text-black hover:shadow-[0_0_40px_rgba(255,255,255,0.4)] transition-all duration-500"
           >
             <Github className="w-5 h-5" />

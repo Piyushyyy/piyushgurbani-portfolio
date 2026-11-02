@@ -81,17 +81,18 @@ const Portfolio = () => {
   const renderContent = (isSharp = false) => {
     return (
       <div className="absolute inset-0 flex flex-col items-center justify-center select-none overflow-hidden">
-        {/* Massive 18vw Watermark text */}
-        <h1 
+        {/* Massive 18vw Watermark text (Decorative background) */}
+        <div 
           ref={!isSharp ? bgTextRef : null}
-          className="absolute text-[18vw] font-black uppercase tracking-tighter leading-none opacity-8 md:opacity-10 text-center select-none pointer-events-none select-none"
+          aria-hidden="true"
+          className="absolute text-[18vw] font-black uppercase tracking-tighter leading-none opacity-8 md:opacity-10 text-center select-none pointer-events-none"
         >
           P
           <span className="text-outline-white">O</span>
           RTF
           <span className="text-outline-white">O</span>
           LIO
-        </h1>
+        </div>
 
         {/* Center Showcase Showcase Image Box */}
         <div className="relative w-[320px] h-[400px] md:w-[420px] md:h-[520px] flex items-center justify-center rounded-3xl overflow-hidden shadow-2xl transition-transform duration-700 hover:scale-105">

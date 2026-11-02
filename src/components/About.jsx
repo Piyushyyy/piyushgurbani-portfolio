@@ -78,7 +78,7 @@ const About = () => {
               <img 
                 key={activeTab}
                 src={getTabImage()} 
-                alt="Piyush Gurbani Portrait" 
+                alt={`Piyush Gurbani - ${activeTab === 'intro' ? 'Creative Developer Profile' : activeTab === 'experience' ? 'Career Experience and Timeline' : 'Core Strengths and Execution'}`} 
                 className={`object-contain relative z-10 filter grayscale group-hover:grayscale-0 transition-all duration-500 ease-out origin-bottom animate-fadeIn ${
                   activeTab === 'intro'
                     ? 'w-full h-full scale-[1.2] lg:scale-[1.28] translate-y-[18%] lg:translate-y-[22%] group-hover:scale-[1.25] lg:group-hover:scale-[1.33]'

@@ -159,7 +159,7 @@ function App() {
       <Portfolio />
 
       {/* SCROLLING OVERLAY CONTENT (Rises over fixed portfolio element) */}
-      <div className="relative w-full z-10">
+      <main id="main-content" className="relative w-full z-10">
         
         {/* 1. Hero Content Overlay */}
         <Hero onHireMeClick={() => setIsLeadModalOpen(true)} />
@@ -194,7 +194,7 @@ function App() {
         {/* 6. Footer (Luxury Yellow Section) */}
         <Footer />
         
-      </div>
+      </main>
 
       {/* Global Lead Form Modal */}
       {isLeadModalOpen && (

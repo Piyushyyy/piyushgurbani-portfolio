@@ -146,7 +146,7 @@ const Hero = ({ onHireMeClick }) => {
               </svg>
 
               <h1 className="text-4xl md:text-6xl lg:text-[3.2vw] font-black uppercase tracking-tight text-zinc-900 leading-[0.9] text-center w-full px-4">
-                <span className="block text-zinc-400 text-xs font-bold tracking-widest mb-1">I'M</span>
+                <span className="block text-zinc-400 text-xs font-bold tracking-widest mb-1">FREELANCE STRATEGIST &amp; DEVELOPER</span>
                 <span className="text-zinc-950">I'm </span>
                 <span className="text-[#f97316]">Piyush Gurbani,</span>
                 {/* Swapping Role Container */}
@@ -187,7 +187,7 @@ const Hero = ({ onHireMeClick }) => {
             >
               <img 
                 src="/piyush_portrait.png" 
-                alt="Piyush Gurbani Portrait Cutout" 
+                alt="Piyush Gurbani - Creative Developer, Marketing Strategist and Video Editor" 
                 className="w-full h-full object-contain filter drop-shadow-[0_15px_35px_rgba(0,0,0,0.3)] scale-[1.1] origin-bottom"
               />
             </div>
@@ -196,12 +196,14 @@ const Hero = ({ onHireMeClick }) => {
             <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 z-20 flex items-center p-1 bg-white/10 border border-white/20 rounded-full shadow-2xl backdrop-blur-md">
               <button
                 onClick={() => handleScrollTo('Portfolio')}
+                aria-label="Scroll to Portfolio section"
                 className="px-6 py-3 bg-[#f97316] hover:bg-[#ea580c] text-white font-black text-xs uppercase tracking-widest rounded-full shadow-md shadow-[#f97316]/20 transition-all duration-300 active:scale-[0.96] cursor-pointer whitespace-nowrap"
               >
                 Portfolio ↗
               </button>
               <button
                 onClick={onHireMeClick}
+                aria-label="Hire Piyush Gurbani"
                 className="px-6 py-3 text-white font-black text-xs uppercase tracking-widest hover:text-[#f97316] transition-all duration-300 active:scale-[0.96] cursor-pointer whitespace-nowrap"
               >
                 Hire me

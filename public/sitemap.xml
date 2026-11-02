@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://piyushgurbani.in/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://piyushgurbani.in/piyush_portrait.png</image:loc>
+      <image:title>Piyush Gurbani - Creative Developer &amp; Marketing Strategist</image:title>
+      <image:caption>Piyush Gurbani portrait cutout and personal brand visual</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://piyushgurbani.in/project_potpourri.png</image:loc>
+      <image:title>Potpourri - Indian Homegrown Brand Platform</image:title>
+      <image:caption>Potpourri platform designed and developed to showcase Indian local brands</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://piyushgurbani.in/project_hirelens.png</image:loc>
+      <image:title>HireLens AI - Intelligent ATS Resume Scanner</image:title>
+      <image:caption>AI recruitment tool analyzing candidate profiles and calculating ATS scores</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://piyushgurbani.in/project_gender_age.png</image:loc>
+      <image:title>Gender &amp; Age Detection System - Computer Vision</image:title>
+      <image:caption>Real-time computer vision deep learning model estimating gender and age</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://piyushgurbani.in/project_stock_predict.png</image:loc>
+      <image:title>Stock Price Prediction Model - Machine Learning</image:title>
+      <image:caption>Machine learning model forecasting financial price trends</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://piyushgurbani.in/project_bank_manage.png</image:loc>
+      <image:title>Bank Management System - Digital Banking Simulator</image:title>
+      <image:caption>Comprehensive software simulation covering banking transactions and accounts</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://piyushgurbani.in/photoshoot_jewelry_1.jpg</image:loc>
+      <image:title>Geeta Shyam Jewellers - Luxury Artisanal Jewellery Photoshoot</image:title>
+      <image:caption>Commercial product photoshoot highlighting fine gold and diamond craftsmanship</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://piyushgurbani.in/photoshoot_pill_5.jpg</image:loc>
+      <image:title>For You Daily - Wellness Supplement Product Shoot</image:title>
+      <image:caption>Minimalist commercial photography for daily health and supplement packaging</image:caption>
+    </image:image>
+  </url>
+</urlset>

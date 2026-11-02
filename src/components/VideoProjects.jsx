@@ -1,26 +1,31 @@
 import { useRef, useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Volume2, VolumeX, ExternalLink } from 'lucide-react';
 
 const reelsData = [
   {
-    title: "aesthetic home promo",
-    videoUrl: "https://res.cloudinary.com/djdbcvg6w/video/upload/v1783111157/Sample_Flat_Reel_l1nwwa.mp4"
+    title: "aesthetic home tour",
+    videoSrc: "/videos/reel_home_tour.mp4",
+    youtubeUrl: "https://youtube.com/shorts/J4fSlQm23zI?feature=share"
   },
   {
     title: "luxury real estate tour",
-    videoUrl: "https://res.cloudinary.com/djdbcvg6w/video/upload/v1783109158/real_estate_add_loo0k8.mp4"
+    videoSrc: "/videos/reel_real_estate.mp4",
+    youtubeUrl: "https://youtube.com/shorts/e27kuaUFwgQ?feature=share"
   },
   {
     title: "artisanal jewelry shimmer",
-    videoUrl: "https://res.cloudinary.com/djdbcvg6w/video/upload/v1783109142/jewllery_reel_sloggv.mp4"
+    videoSrc: "/videos/reel_jewelry.mp4",
+    youtubeUrl: "https://youtube.com/shorts/H_-eT5XBOEA?feature=share"
   },
   {
     title: "personal brand lifestyle",
-    videoUrl: "https://res.cloudinary.com/djdbcvg6w/video/upload/v1783109139/personal_1_dpshcd.mp4"
+    videoSrc: "/videos/reel_personal_brand.mp4",
+    youtubeUrl: "https://youtube.com/shorts/jyXnvgRoReg?feature=share"
   },
   {
-    title: "creative storytelling",
-    videoUrl: "https://res.cloudinary.com/djdbcvg6w/video/upload/v1783111330/final_casandra_yvgotz.mp4"
+    title: "event montages",
+    videoSrc: "/videos/reel_event_montages.mp4",
+    youtubeUrl: "https://youtube.com/shorts/oqEWmdjswFA?feature=share"
   }
 ];
 
@@ -28,61 +33,81 @@ const PhoneVideoCard = ({ reel }) => {
   const videoRef = useRef(null);
   const [isMuted, setIsMuted] = useState(true);
 
-  // Auto-play checks on mount
+  // Auto-play automatically on mount and keep playing in loop
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.play().catch(() => {});
+      videoRef.current.muted = true;
+      videoRef.current.play().catch(() => {
+        // Fallback if browser policies restrict immediate autoplay
+      });
     }
   }, []);
 
   const toggleMute = (e) => {
     e.stopPropagation();
     if (!videoRef.current) return;
-    videoRef.current.muted = !videoRef.current.muted;
-    setIsMuted(videoRef.current.muted);
+    const nextMuted = !videoRef.current.muted;
+    videoRef.current.muted = nextMuted;
+    setIsMuted(nextMuted);
   };
 
   return (
     <div className="flex flex-col items-center select-none snap-center py-4">
-      {/* iPhone Mockup Frame - Proportions sized to fit 5 side-by-side on desktop */}
+      {/* iPhone Mockup Frame */}
       <div 
         className="relative w-[180px] h-[360px] sm:w-[200px] sm:h-[400px] md:w-[225px] md:h-[450px] rounded-[36px] bg-zinc-950 border-[5px] border-zinc-900 shadow-2xl overflow-hidden group transition-all duration-300 hover:scale-[1.03] hover:border-zinc-800"
       >
         {/* Dynamic Island */}
-        <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-16 h-3 bg-zinc-900 rounded-full z-30 flex items-center justify-around px-1.5 shadow-inner">
+        <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-16 h-3 bg-zinc-900 rounded-full z-30 flex items-center justify-around px-1.5 shadow-inner pointer-events-none">
           <div className="w-0.5 h-0.5 rounded-full bg-zinc-800" />
           <div className="w-4 h-0.5 bg-zinc-950 rounded-full" />
         </div>
 
-        {/* Video Element (object-cover to fill frame like standard phone reels) */}
+        {/* Native 9:16 Video Player with Pure Edge-to-Edge Fill (Zero YouTube logos/watermarks) */}
         <video 
           ref={videoRef}
-          src={reel.videoUrl}
+          src={reel.videoSrc}
           className="w-full h-full object-cover z-10"
           autoPlay
           loop
           muted={isMuted}
           playsInline
+          preload="auto"
         />
 
-        {/* Bottom Details Overlay - Top-aligned inside fixed height box to align texts across cards */}
-        <div className="absolute bottom-0 left-0 w-full p-4 pb-6 pt-10 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-25 text-left flex flex-col justify-start h-[75px] md:h-[80px] pointer-events-none">
-          <h4 className="text-white font-black text-xs sm:text-sm uppercase tracking-tight leading-tight line-clamp-2 h-[32px] md:h-[36px]">
+        {/* Bottom Details Overlay */}
+        <div className="absolute bottom-0 left-0 w-full p-4 pb-6 pt-10 bg-gradient-to-t from-black/95 via-black/50 to-transparent z-25 text-left flex flex-col justify-start h-[75px] md:h-[80px] pointer-events-none">
+          <h4 className="text-white font-black text-xs sm:text-sm uppercase tracking-tight leading-tight line-clamp-2">
             {reel.title}
           </h4>
         </div>
 
-        {/* Sound Toggle Controller */}
+        {/* Mute / Unmute Audio Toggle Controller */}
         <button
           onClick={toggleMute}
-          className="absolute bottom-4 right-4 z-30 w-7 h-7 rounded-full bg-zinc-900/70 backdrop-blur-md border border-white/10 hover:bg-zinc-800 flex items-center justify-center text-white transition-all cursor-pointer shadow-md"
+          aria-label={isMuted ? `Unmute audio for ${reel.title}` : `Mute audio for ${reel.title}`}
+          title={isMuted ? "Tap to unmute" : "Tap to mute"}
+          className="absolute bottom-4 right-4 z-30 w-8 h-8 rounded-full bg-zinc-900/80 backdrop-blur-md border border-white/15 hover:bg-zinc-800 flex items-center justify-center text-white transition-all cursor-pointer shadow-lg hover:scale-110 active:scale-95"
         >
           {isMuted ? (
-            <span className="text-[9px]">🔇</span>
+            <VolumeX className="w-4 h-4 text-zinc-300" />
           ) : (
-            <span className="text-[9px]">🔊</span>
+            <Volume2 className="w-4 h-4 text-yellow-400 animate-pulse" />
           )}
         </button>
+
+        {/* Watch on YouTube direct link */}
+        <a 
+          href={reel.youtubeUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Watch ${reel.title} on YouTube`}
+          title="Watch original on YouTube"
+          onClick={(e) => e.stopPropagation()}
+          className="absolute top-3 right-3 z-30 w-7 h-7 rounded-full bg-zinc-900/80 backdrop-blur-md border border-white/15 hover:bg-red-600 hover:border-red-500 text-white flex items-center justify-center transition-all shadow-md group/yt cursor-pointer hover:scale-105 active:scale-95"
+        >
+          <ExternalLink className="w-3.5 h-3.5" />
+        </a>
       </div>
     </div>
   );

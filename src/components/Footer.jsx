@@ -69,7 +69,7 @@ const Footer = () => {
           <div className="w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden border-4 border-zinc-900 shadow-2xl transition-transform duration-700 hover:scale-110 mb-6 relative group">
             <img 
               src="/piyush_footer.jpg" 
-              alt="Piyush Gurbani Profile Avatar" 
+              alt="Piyush Gurbani - Creative Developer &amp; Marketing Strategist" 
               className="w-full h-full object-cover"
             />
             {/* Ambient hover glow ring */}
@@ -81,9 +81,10 @@ const Footer = () => {
             
             {/* Follow Button (Blue with Neon Glow hover) */}
             <a
-              href="https://www.linkedin.com/in/piyush-gurbani-40966041b/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BgZG%2B%2BFD%2BR%2BK6cQWxZwzBMQ%3D%3D"
+              href="https://www.linkedin.com/in/piyush-gurbani-521a79441/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Follow Piyush Gurbani on LinkedIn"
               className="flex items-center gap-2 px-6 py-3.5 bg-[#2563eb] text-white hover:bg-blue-700 rounded-full font-black text-xs uppercase tracking-widest shadow-lg shadow-blue-600/30 hover:shadow-[0_0_30px_rgba(37,99,235,0.6)] transition-all duration-300 active:scale-95 cursor-pointer"
             >
               <UserPlus className="w-4 h-4" />

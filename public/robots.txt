@@ -1,0 +1,6 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap Index for Google Search Console & other search engines
+Sitemap: https://piyushgurbani.in/sitemap.xml

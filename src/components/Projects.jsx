@@ -141,7 +141,7 @@ const Projects = () => {
               <div className="w-full h-36 rounded-2xl overflow-hidden relative">
                 <img 
                   src={project.image} 
-                  alt={project.title} 
+                  alt={`${project.title} - ${project.category} by Piyush Gurbani`} 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
@@ -214,7 +214,7 @@ const Projects = () => {
             <div className="w-full h-44 rounded-2xl overflow-hidden mb-4">
               <img 
                 src={project.image} 
-                alt={project.title} 
+                alt={`${project.title} - ${project.category} by Piyush Gurbani`} 
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
               />
             </div>

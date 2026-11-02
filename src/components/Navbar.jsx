@@ -139,6 +139,7 @@ const Navbar = ({ activeSection }) => {
             href="https://wa.me/918949768356?text=Hi%2C%20I%E2%80%99m%20interested%20in%20your%20marketing%2C%20website%20development%2C%20and%20branding%20services.%20Can%20you%20share%20more%20details%20on%20how%20you%20can%20help%20my%20business%20grow%3F"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Chat with Piyush Gurbani on WhatsApp"
             className="p-1.5 text-zinc-400 hover:text-[#25D366] transition-colors cursor-pointer flex items-center justify-center"
             title="Chat on WhatsApp"
           >
@@ -148,6 +149,7 @@ const Navbar = ({ activeSection }) => {
           {/* Hamburger Menu trigger */}
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Open mobile navigation menu"
             className="p-1.5 text-white hover:text-[#f97316] transition-colors cursor-pointer"
           >
             <Menu className="w-5 h-5" />
@@ -162,6 +164,7 @@ const Navbar = ({ activeSection }) => {
         >
           <button 
             onClick={() => setIsMobileMenuOpen(false)}
+            aria-label="Close mobile navigation menu"
             className="absolute top-6 right-6 p-2 text-zinc-400 hover:text-white transition-colors cursor-pointer rounded-full bg-white/5 hover:bg-white/10 border-none outline-none"
           >
             <X className="w-6 h-6" />
@@ -173,7 +176,7 @@ const Navbar = ({ activeSection }) => {
               PG
             </div>
             <h4 className="text-white font-black uppercase tracking-tight text-sm">Piyush Gurbani</h4>
-            <span className="text-[10px] font-mono tracking-widest uppercase text-zinc-550 mt-1">Growth & Development</span>
+            <span className="text-[10px] font-mono tracking-widest uppercase text-zinc-500 mt-1">Growth & Development</span>
           </div>
 
           {/* Navigation Links with Active Highlighting */}
@@ -202,9 +205,10 @@ const Navbar = ({ activeSection }) => {
           {/* Menu Bottom Socials */}
           <div className="flex gap-6 border-t border-white/5 pt-8 w-full max-w-xs justify-center">
             <a 
-              href="https://www.linkedin.com/in/piyush-gurbani-40966041b/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BgZG%2B%2BFD%2BR%2BK6cQWxZwzBMQ%3D%3D" 
+              href="https://www.linkedin.com/in/piyush-gurbani-521a79441/" 
               target="_blank" 
               rel="noopener noreferrer" 
+              aria-label="Connect with Piyush Gurbani on LinkedIn"
               className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-white transition-all active:scale-90"
             >
               <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -215,12 +219,14 @@ const Navbar = ({ activeSection }) => {
               href="https://wa.me/918949768356" 
               target="_blank" 
               rel="noopener noreferrer" 
+              aria-label="Chat with Piyush Gurbani on WhatsApp"
               className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-[#25D366] transition-all active:scale-90"
             >
               <WhatsAppIcon className="w-4 h-4" />
             </a>
             <a 
               href="mailto:piyushgurbani456@gmail.com" 
+              aria-label="Send email to Piyush Gurbani"
               className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-white transition-all active:scale-90"
             >
               <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -236,6 +242,7 @@ const Navbar = ({ activeSection }) => {
         href="https://wa.me/918949768356?text=Hi%2C%20I%E2%80%99m%20interested%20in%20your%20marketing%2C%20website%20development%2C%20and%20branding%20services.%20Can%20you%20share%20more%20details%20on%20how%20you%20can%20help%20my%20business%20grow%3F"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Chat with Piyush Gurbani on WhatsApp"
         className="hidden md:flex fixed bottom-6 right-6 z-40 p-4 bg-[#25D366] text-white rounded-full shadow-xl shadow-[#25D366]/20 hover:scale-110 active:scale-95 transition-all duration-300 cursor-pointer hover:bg-[#20ba5a] flex items-center justify-center"
         title="Chat on WhatsApp"
       >

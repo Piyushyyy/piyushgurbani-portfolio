@@ -96,7 +96,7 @@ const ProductPhotoshoots = () => {
             <img 
               src={currentShoot.images[0]} 
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" 
-              alt={`${currentShoot.brandName} photoshoot main`}
+              alt={`${currentShoot.brandName} - Commercial luxury photoshoot by Piyush Gurbani`}
               loading="lazy"
             />
             <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -112,7 +112,7 @@ const ProductPhotoshoots = () => {
             <img 
               src={currentShoot.images[1]} 
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" 
-              alt={`${currentShoot.brandName} photoshoot detail 1`}
+              alt={`${currentShoot.brandName} - Detailed product styling and lighting by Piyush Gurbani`}
               loading="lazy"
             />
             <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -128,7 +128,7 @@ const ProductPhotoshoots = () => {
             <img 
               src={currentShoot.images[2]} 
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" 
-              alt={`${currentShoot.brandName} photoshoot detail 2`}
+              alt={`${currentShoot.brandName} - Studio lighting detail photograph by Piyush Gurbani`}
               loading="lazy"
             />
             <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -144,7 +144,7 @@ const ProductPhotoshoots = () => {
             <img 
               src={currentShoot.images[3]} 
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" 
-              alt={`${currentShoot.brandName} photoshoot detail 3`}
+              alt={`${currentShoot.brandName} - Angle close-up shot by Piyush Gurbani`}
               loading="lazy"
             />
             <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -160,7 +160,7 @@ const ProductPhotoshoots = () => {
             <img 
               src={currentShoot.images[4]} 
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" 
-              alt={`${currentShoot.brandName} photoshoot detail 4`}
+              alt={`${currentShoot.brandName} - High resolution product showcase shot by Piyush Gurbani`}
               loading="lazy"
             />
             <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
